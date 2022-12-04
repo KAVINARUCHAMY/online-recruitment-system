@@ -1,7 +1,9 @@
 import React from 'react';
-import useform from "./useform";
+//import { ReactDOM } from 'react';
+import useform from "./useform.js";
+import {Link, Route } from 'react-router-dom';
 
-const signupform =({ submitform }) =>{
+const signupform =({ submitform }) => {
     const {handleChange, handleFormsubmit, values, errors} = useform(
         submitform
     );
@@ -44,17 +46,24 @@ const signupform =({ submitform }) =>{
                 
                 {errors.confirmpassword && <p className="error">{errors.confirmpassword} </p>}
                 </div>
-                
-                <div className="checkbox">
-                    <label className="input" type="checkbox" name="recruiter" value={values.recruiter} onChange={handleChange} placeholder="recruiter"></label>
-                {errors.checkbox && <p className="error">{errors.recruiter}</p>}
-                </div>
-                <div className="checkbox">
-                    <label className="input" type="checkbox" name="candidate" value={values.candidate} onChange={handleChange} placeholder="candidate"></label>
-                {errors.checkbox && <p className="error">{errors.candidate}</p>}
-                </div>
-                <div button className="submit" onClick={handleFormsubmit}>Sign Up</div>
             </form>
+            <form className="checker">  
+                    <div className="recuriter">
+                    <input className="input" type="radio" name="recruiter" value={values.recruiter} onChange={handleChange} ></input>
+                    <label className="label">Recuriter</label>
+                    
+                {errors.recuriter && <p className="error">{errors.recruiter}</p>}
+                </div>
+                <div className="recuriter">
+                    <input className="input" type="radio" name="candidate" value={values.candidate} onChange={handleChange} ></input>
+                    <label className="label">Candidate</label>
+                    
+                {errors.candidate && <p className="error">{errors.candidate}</p>}
+                </div>
+                <div button className="submit" onClick={handleFormsubmit}><Link to="/components/login/Loginform">Sign Up</Link></div>
+                <Route path='./components/login/Loginform' compononet ={Loginform}></Route>
+            </form>
+            
         </div>
     </div>
     )

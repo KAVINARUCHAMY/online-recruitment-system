@@ -28,13 +28,12 @@ const validation =(values) => {
     }else if(values.confirmpassword !== values.password){
         errors.confirmpassword="confirmpassword is not equal to password.";
     }
-    if(!values.recruiter)
+    if(values.recruiter)
     {
         if(!values.candidate)
         {
             errors.candidate="Click any one."
         }
-        errors.recruiter="Click any one."
     }
 
 

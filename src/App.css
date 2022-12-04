@@ -13,8 +13,8 @@
 .app-wrapper{
   background-color: #fff;
   min-width: 350px;
-  min-height: 650px;
-  padding: 30px;
+  min-height: 500px;
+  padding: 20px;
   box-sizing: border-box;
   border-radius: 25px;
 }
@@ -26,15 +26,16 @@
 .name,
 .email,
 .password,
-.checkbox {
+.recuriter {
   margin: 20px;
   color:black;
   font-size: 16px;
+  margin-bottom: 5px;
   
 }
 
 .password  {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
 }
 .input{
@@ -58,7 +59,7 @@
   font-size: 20px;
   border-radius: 25px;
   color: white;
-  padding: 10px 120px;
+  padding: 10px 150px;
   
   background: rgb(66, 66, 228);
   box-shadow: rgba(0, 0, 0, 0.3)0px 19px 18px,
@@ -68,6 +69,10 @@
   border: none;
   cursor: pointer;
   transition: all 0.1s;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 80px;
+
 }
 button:active{
   transform: translateY(2px);
